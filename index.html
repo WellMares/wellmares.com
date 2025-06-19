@@ -1,1 +1,122 @@
-no mares today
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellMares</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
+
+        body {
+            background: linear-gradient(135deg, #f8e1ff 0%, #c1eaff 100%);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Baloo 2', cursive, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            color: #7c3aed;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 2px 8px #fff7;
+        }
+
+        img {
+            max-width: 80vw;
+            max-height: calc(100vh - 380px);
+            transition: transform 0.15s;
+            cursor: pointer;
+            margin-bottom: 1.2rem;
+            border: 4px solid #fff;
+        }
+
+        img:active {
+            transform: scale(0.96) rotate(-5deg);
+            box-shadow: 0 2px 8px #7c3aed55;
+        }
+
+        .boop-container {
+            background: #fff8;
+            border-radius: 1.5rem;
+            padding: 0.8rem 2rem;
+            font-size: 1.3rem;
+            color: #3b0764;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 2px 12px #7c3aed22;
+            font-weight: bold;
+            letter-spacing: 0.03em;
+        }
+
+        #boop-count {
+            color: #f59e42;
+            font-size: 1.5em;
+            font-family: inherit;
+            transition: color 0.2s;
+        }
+
+        button {
+            background: linear-gradient(90deg, #7c3aed 0%, #38bdf8 100%);
+            color: #fff;
+            border: none;
+            border-radius: 2rem;
+            padding: 0.7rem 2.2rem;
+            font-size: 1.2rem;
+            font-family: inherit;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 16px #7c3aed33;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #a78bfa 0%, #38bdf8 100%);
+            transform: translateY(-2px) scale(1.04);
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            img {
+            }
+            .boop-container {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+            }
+            button {
+                font-size: 1rem;
+                padding: 0.5rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>All mares today!</h1>
+    <img src="https://derpicdn.net/img/2016/3/3/1101333/large.png" onclick="boop()" alt="Mare">
+    <div class="boop-container">
+        Mare booped <span id="boop-count">0</span> times.
+    </div>
+    <button onclick="boop()">Boop a mare!</button>
+    <script>
+        var boopCount = 0;
+        var boopCountEl = document.getElementById('boop-count');
+
+        function boop() {
+            boopCount++;
+            boopCountEl.innerText = boopCount.toString();
+            // Optional: Animate the count color for feedback
+            boopCountEl.style.color = "#fbbf24";
+            setTimeout(() => {
+                boopCountEl.style.color = "#f59e42";
+            }, 200);
+        }
+    </script>
+</body>
+
+</html>
