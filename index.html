@@ -118,7 +118,8 @@
             getDatabase,
             ref,
             onValue,
-            runTransaction
+            set,
+            increment
         } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-database.js";
 
         // Your web app's Firebase configuration
@@ -176,9 +177,9 @@
             setTimeout(() => {
                 boopCountEl.style.color = "#f59e42";
             }, 200);
-
+            
             // Send increment to Firebase
-            runTransaction(boopCountRef, (current) => (current || 0) + 1)
+            set(boopCountRef, increment(1))
                 .then(() => {
                     // On success, let the onValue handler update the UI
                     optimisticCount = null;
