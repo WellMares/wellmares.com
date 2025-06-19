@@ -82,12 +82,14 @@
             h1 {
                 font-size: 1.5rem;
             }
-            img {
-            }
+
+            img {}
+
             .boop-container {
                 font-size: 1rem;
                 padding: 0.5rem 1rem;
             }
+
             button {
                 font-size: 1rem;
                 padding: 0.5rem 1.2rem;
@@ -104,19 +106,96 @@
     </div>
     <button onclick="boop()">Boop a mare!</button>
     <script>
-        var boopCount = 0;
-        var boopCountEl = document.getElementById('boop-count');
+        // Show last boop count from localStorage instantly, before Firebase loads
+        (function () {
+            var LOCAL_KEY = 'boop-count';
+            var boopCountEl = document.getElementById('boop-count');
+            var localCount = parseInt(localStorage.getItem(LOCAL_KEY), 10);
+            if (boopCountEl && !isNaN(localCount)) {
+                boopCountEl.innerText = localCount;
+            }
+        })();
+    </script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+        import {
+            getDatabase,
+            ref,
+            onValue,
+            runTransaction
+        } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-database.js";
 
-        function boop() {
-            boopCount++;
-            boopCountEl.innerText = boopCount.toString();
-            // Optional: Animate the count color for feedback
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDtXl_8wE6yZwMABdnzTW96q9-wlgeoWw8",
+            authDomain: "wellmares.firebaseapp.com",
+            projectId: "wellmares",
+            storageBucket: "wellmares.firebasestorage.app",
+            messagingSenderId: "297226050284",
+            appId: "1:297226050284:web:186e308b3395983bf2a3c9",
+            measurementId: "G-N831WHY7Y6"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        // Reference to the global boop count
+        const boopCountRef = ref(db, 'click-count');
+        const boopCountEl = document.getElementById('boop-count');
+        const LOCAL_KEY = 'boop-count';
+
+        // Local optimistic count
+        let optimisticCount = null;
+        let lastServerCount = 0;
+
+        // Update UI in real-time from server
+        onValue(boopCountRef, (snapshot) => {
+            const val = snapshot.val() || 0;
+            lastServerCount = val;
+            localStorage.setItem(LOCAL_KEY, val); // Save to localStorage
+            // If we have no pending optimistic update, show server value
+            if (optimisticCount === null) {
+                boopCountEl.innerText = val;
+            }
+            // If optimisticCount is behind server (e.g. another user clicked), update
+            else if (val > optimisticCount) {
+                optimisticCount = null;
+                boopCountEl.innerText = val;
+            }
+        });
+
+        // Boop function: optimistic UI update, then send to Firebase
+        window.boop = function () {
+            // If no optimistic update, start from server value
+            if (optimisticCount === null) {
+                optimisticCount = lastServerCount;
+            }
+            optimisticCount++;
+            boopCountEl.innerText = optimisticCount;
+            localStorage.setItem(LOCAL_KEY, optimisticCount); // Save to localStorage
+
+            // Animate the count color for feedback
             boopCountEl.style.color = "#fbbf24";
             setTimeout(() => {
                 boopCountEl.style.color = "#f59e42";
             }, 200);
-        }
+
+            // Send increment to Firebase
+            runTransaction(boopCountRef, (current) => (current || 0) + 1)
+                .then(() => {
+                    // On success, let the onValue handler update the UI
+                    optimisticCount = null;
+                })
+                .catch(() => {
+                    // On error, revert to server value
+                    optimisticCount = null;
+                    boopCountEl.innerText = lastServerCount;
+                    localStorage.setItem(LOCAL_KEY, lastServerCount); // Save to localStorage
+                });
+        };
     </script>
+
 </body>
 
 </html>
