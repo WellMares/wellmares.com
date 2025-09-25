@@ -1,5 +1,6 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5000 5336" width="500" height="533">
-	<title>Marestare base</title>
+<svg version="1.2"
+	xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5000 5000" width="500" height="500">
+	<title>pony xeyes</title>
 	<defs>
 		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
 			<path d="m1670.2 3948.6c168.86-15.49 302.48-159.38 373.94-373.01 22.83-68.27 34.93-142.13 43.05-223.34 13.43-134.48 25.85-298.93-0.77-449.11-87.51-493.55-342.04-831.49-678.84-786.53-77.46 10.34-145.97 61.99-204.35 122.26-70.13 72.39-134.55 176.67-170.28 300.39-11.53 39.93-11.86 81.11-19.17 125.1-19.73 118.85-23.5 251.68-7.71 391.75 57.54 510.15 351.78 921.14 664.13 892.49z"/>
@@ -10,7 +11,7 @@
 		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-25.168,1441.858,-972.348,-16.972,1708.105,2378.057)">
 			<stop offset="0" stop-color="#20205d"/>
 			<stop offset=".15" stop-color="#20205d"/>
-			<stop offset=".547" stop-color="#506bcb"/>
+			<stop offset=".547" stop-color="#506bcb"/> 
 			<stop offset="1" stop-color="#506bcb"/>
 		</linearGradient>
 		<clipPath clipPathUnits="userSpaceOnUse" id="cp3">
@@ -90,6 +91,7 @@
 			<path id="Eyelash 3" fill-rule="evenodd" class="s10" d="m1240.37 2205.24c-255.97-316.25-329.47-270-54.51 46.64 17.77-12.88 34.04-28.23 54.51-46.64z"/>
 			<path id="Eyelash 2" fill-rule="evenodd" class="s10" d="m1109.84 2346.86c-500.03-159.54-527.87-78.12-27.62 65.09 11.44-9.88 24.55-52.08 27.62-65.09z"/>
 			<path id="Eyelash 1" fill-rule="evenodd" class="s10" d="m1028.18 2570.94c-437.39 37.06-442.97 126.34-11.38 68.55 2.92-20.18 8.6-53.18 11.38-68.55z"/>
+            <path id="Move area" fill-rule="evenodd" fill="#00000000" d="m1458.44 2233.28c96.37-1.68 211.89 66.84 313.36 210.54 101.49 143.72 181.15 354.24 205.44 589.03v0.01c24.38 235.5-12.28 446.88-81.56 589.16-69.27 142.27-156.75 206.82-253.8 208.29h-0.02-0.02c-96.98 1.51-212.85-67.79-314.33-212.45-101.48-144.66-180.77-356.2-204.41-591.36v-0.01-0.01c-23.6-234.45 13.38-444.48 82.57-585.87 69.19-141.37 156.44-205.6 252.77-207.33z"/>
 		</g>
 		<g id="Mane front 2">
 			<path id="BG 2" fill-rule="evenodd" class="s11" d="m3985.19 1055.1c-691.77-629.38-1692.67-524.13-2454.91 20.03-597.01 426.2-964.54 978.73-932.88 2080.86 809.56-764.76 2496.59-1728.49 3387.79-2100.89z"/>
@@ -136,128 +138,521 @@
 			<path id="Eyelash 3" fill-rule="evenodd" class="s10" d="m3822.77 2146.67c260.62-361.58 339.29-313.86 57.82 48.05-18.77-13.13-36.07-29.03-57.82-48.05z"/>
 			<path id="Eyelash 2" fill-rule="evenodd" class="s10" d="m3961.75 2293.88c521.97-196.98 551.7-108.93 30.08 68.75-12.06-10.1-26.6-54.88-30.08-68.75z"/>
 			<path id="Eyelash 1" fill-rule="evenodd" class="s10" d="m4050.95 2529.93c454.06 21.9 460.1 116.55 13.05 72.07-3.39-21.2-9.88-55.89-13.05-72.07z"/>
+			<path id="Move area" fill-rule="evenodd" fill="#00000000" d="m3601.04 2180.5c92.53-0.34 182.08 63.06 255.85 206.87 73.77 143.81 117.63 358.25 102.35 598.21-15.27 239.91-86.23 456.36-180.89 604.76-94.65 148.4-204.58 219.05-297.15 219.36h-0.02-0.02c-92.52 0.34-182.08-63.06-255.85-206.87-73.77-143.81-117.62-358.25-102.35-598.21 15.27-239.91 86.23-456.33 180.88-604.72 94.66-148.39 204.6-219.06 297.2-219.4z"/>
 		</g>
 	</g>
 	<script><![CDATA[
-	(function () {
-	const eyes = {
-	left: {
-	// "cx":1548.9305419921875,"cy":3043.422119140625,"rx":450.506591796875,"ry":810.911865234375,"ox":-140,"oy":-50
-	el: document.querySelector('#Left\\ eye #Eye\\ center'),
-	cx: 1548.9305419921875,
-	cy: 3043.422119140625,
-	rx: 465.5234375,
-	ry: 810.911865234375,
-	ox: -120,
-	oy: -50
-	},
-	right: {
-	el: document.querySelector('#Right\\ eye #Eye\\ center'),
-	cx: 3566.198974609375,
-	cy: 2993.365966796875,
-	rx: 465.5234375,
-	ry: 810.911865234375,
-	ox: 120,
-	oy: -50
-	}
-	};
+/**
+ * @typedef {Object} PointLike
+ * @property {number} x
+ * @property {number} y
+ */
 
-	const svg = document.querySelector('svg');
-	window.xeyes = eyes; // expose main config
+/**
+ * Find the center point of an SVG path
+ * @param {SVGPathElement} path
+ */
+function findSVGPathCenter(path) {
+    const length = path.getTotalLength();
 
-	// ------------------------
-	// X-eyes follow mouse
-	// ------------------------
-	svg.addEventListener('mousemove', function (evt) {
-	const pt = svg.createSVGPoint();
-	pt.x = evt.clientX;
-	pt.y = evt.clientY;
-	const cursor = pt.matrixTransform(svg.getScreenCTM().inverse());
+    const p00 = path.getPointAtLength(0);
+    const p25 = path.getPointAtLength(length * 0.25);
+    const p50 = path.getPointAtLength(length * 0.5);
+    const p75 = path.getPointAtLength(length * 0.75);
 
-	for (const side in eyes) {
-	const e = eyes[side];
-	const dx = cursor.x - e.cx;
-	const dy = cursor.y - e.cy;
+    return getIntersection(p00, p50, p25, p75);
+}
 
-	let nx = dx / e.rx;
-	let ny = dy / e.ry;
-	let tx = dx,
-	ty = dy;
+/**
+ * Get intersection point of two line segments
+ * @param {PointLike} l1s start of line 1
+ * @param {PointLike} l1e end of line 1
+ * @param {PointLike} l2s start of line 2
+ * @param {PointLike} l2e end of line 2
+ * @return {PointLike | null} intersection point or null if line segments do not intersect
+ */
+function getIntersection(l1s, l1e, l2s, l2e) {
+    const x1 = l1s.x, y1 = l1s.y;
+    const x2 = l1e.x, y2 = l1e.y;
+    const x3 = l2s.x, y3 = l2s.y;
+    const x4 = l2e.x, y4 = l2e.y;
 
-	if (nx * nx + ny * ny > 1) {
-	const k = 1 / Math.sqrt(nx * nx + ny * ny);
-	tx = dx * k;
-	ty = dy * k;
-	}
+    // Compute denominators
+    const denom = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4);
 
-	tx += e.ox;
-	ty += e.oy;
+    if (denom === 0) {
+        // lines are parallel or coincident
+        return null;
+    }
 
-	e.el.setAttribute('transform', 'translate(' + tx + ',' + ty + ')');
-	}
-	});
+    const px =
+        ((x1 * y2 - y1 * x2) * (x3 - x4) -
+            (x1 - x2) * (x3 * y4 - y3 * x4)) /
+        denom;
+    const py =
+        ((x1 * y2 - y1 * x2) * (y3 - y4) -
+            (y1 - y2) * (x3 * y4 - y3 * x4)) /
+        denom;
 
-	// ------------------------
-	// Calibration helper
-	// ------------------------
-	window.xeyes.calcEllipse = function (side) {
-	const e = eyes[side];
-	if (!e) {
-	console.warn('Unknown eye name:', side);
-	return;
-	}
-	console.log(
-	`Click 4 points around the ${side} sclera bounds (top/right/bottom/left)...`
-	);
+    if (
+        px < Math.min(x1, x2) - 1e-6 ||
+        px > Math.max(x1, x2) + 1e-6 ||
+        px < Math.min(x3, x4) - 1e-6 ||
+        px > Math.max(x3, x4) + 1e-6 ||
+        py < Math.min(y1, y2) - 1e-6 ||
+        py > Math.max(y1, y2) + 1e-6 ||
+        py < Math.min(y3, y4) - 1e-6 ||
+        py > Math.max(y3, y4) + 1e-6
+    ) {
+        return null; // Intersection outside segment bounds
+    }
 
-	let clicks = [];
-	const handler = function (evt) {
-	const pt = svg.createSVGPoint();
-	pt.x = evt.clientX;
-	pt.y = evt.clientY;
-	const p = pt.matrixTransform(svg.getScreenCTM().inverse());
-	clicks.push([p.x, p.y]);
+    return { x: px, y: py };
+}
 
-	console.log(`Click registered (${clicks.length}/4):`, p);
+/**
+ * Get angle of point relative to center
+ * @param {PointLike} pt
+ * @param {PointLike} center
+ * @returns {number} Angle in degrees [-180, 180]
+ */
+function getAngle(pt, center) {
+    const dx = pt.x - center.x;
+    const dy = pt.y - center.y;
+    return Math.atan2(dy, dx) * 180 / Math.PI;
+}
 
-	if (clicks.length === 4) {
-	svg.removeEventListener('click', handler);
+/**
+ * Build a lookup map for fast angle -> boundary interpolation
+ * @param {SVGPathElement} path
+ * @param {PointLike} center
+ * @returns {{ [k: number]: {point:[number,number,number], next:[number,number,number]}}}
+ */
+function buildAngleMap(path, center) {
+    /** @type {{ [k: number]: [number,number,number] }} */
+    const points = {};
+    const length = path.getTotalLength();
+    let stepLength = length / 720;
+    let curr = 0;
+    let angle = getAngle(path.getPointAtLength(0), center);
+    let angleKey = Math.round(angle * 2); // 0.5° resolution
+    const startAngleKey = angleKey;
+    let noAdvance = 0;
+    while (true) {
+        let next = curr + stepLength;
+        if (next > length) {
+            next -= length;
+        }
+        const pt = path.getPointAtLength(next);
+        const nextAngle = getAngle(pt, center);
+        const nextAngleKey = Math.round(nextAngle * 2);
+        if (nextAngleKey === angleKey) {
+            // if we didn't advance to the next angle key, the step is too small.
+            // Increase and try again
+            stepLength *= 1.5;
+            noAdvance++;
+        } else if (nextAngleKey !== angleKey + 1) {
+            // If we skipped at least one angle key, the step is too large.
+            // Decrease and try again
+            stepLength /= 1.5;
+            noAdvance++;
+        } else {
+            // Valid step, store and continue
+            /** @type {[number,number,number]} */
+            const point = [angle, pt.x, pt.y];
+            if (angleKey === -360) {
+                points[360] = point;
+            }
+            points[angleKey] = point;
+            curr = next;
+            angle = nextAngle;
+            angleKey = nextAngleKey;
+            noAdvance = 0;
+            if (angleKey === startAngleKey) {
+                // Completed full circle
+                break;
+            }
+            if (angleKey === 360) {
+                angleKey = -360;
+            }
+        }
+        if (noAdvance > 20) {
+            // Something is wrong, we are not making progress
+            console.warn('buildAngleMap: No progress after 20 attempts, stopping');
+            throw new Error('buildAngleMap: No progress after 20 attempts, stopping');
+        }
+    }
 
-	const xs = clicks.map((c) => c[0]);
-	const ys = clicks.map((c) => c[1]);
+    /** @type {{ [k: number]: {point:[number,number,number], next:[number,number,number]}}} */
+    const map = {};
+    for (let i = -360; i <= 360; i++) {
+        const next = points[(i === 360 ? -360 : i) + 1];
+        map[i] = { point: points[i], next };
+    }
+    return map;
+}
 
-	const minX = Math.min.apply(null, xs);
-	const maxX = Math.max.apply(null, xs);
-	const minY = Math.min.apply(null, ys);
-	const maxY = Math.max.apply(null, ys);
+/**
+ * Project a point to the boundary of a path
+ * @param {{ [k: number]: {point:[number,number,number], next:[number,number,number]}}} angleMap Angle map from buildAngleMap
+ * @param {PointLike} center Center point of the path
+ * @param {PointLike} cursor Point to project
+ * @returns {PointLike} Projected point on the path boundary
+ */
+function projectToPathBoundary(angleMap, center, cursor) {
+    let cursorA = getAngle(cursor, center);
+    const angleKey = Math.round(cursorA * 2);
+    const entry = angleMap[angleKey];
 
-	const cx = (minX + maxX) / 2;
-	const cy = (minY + maxY) / 2;
-	const rx = (maxX - minX) / 2;
-	const ry = (maxY - minY) / 2;
+    if (!entry) {
+        console.warn('projectToPathBoundary: No entry for angle', cursorA, angleKey);
+        return { x: center.x, y: center.y };
+    }
 
-	// Update live config
-	e.cx = cx;
-	e.cy = cy;
-	e.rx = rx;
-	e.ry = ry;
+    let pointA = entry.point[0];
+    const pointX = entry.point[1];
+    const pointY = entry.point[2];
+    let nextA = entry.next[0];
+    const nextX = entry.next[1];
+    const nextY = entry.next[2];
 
-	console.log(
-	`%cCalibration complete for ${side}!`,
-	'color: lime; font-weight:bold'
-	);
-	console.log(
-	`cx=${cx.toFixed(1)}, cy=${cy.toFixed(1)}, rx=${rx.toFixed(
-	1
-	)}, ry=${ry.toFixed(1)}`
-	);
-	console.log(
-	'Paste these into config if you want them as defaults.'
-	);
-	}
-	};
-	svg.addEventListener('click', handler);
-	};
-	})();
-	]]></script>
+    if (angleKey === 360 || angleKey === -360) {
+        if (pointA < 0) {
+            pointA += 360;
+        }
+        if (nextA < 0) {
+            nextA += 360;
+        }
+        if (cursorA < 0) {
+            cursorA += 360;
+        }
+    }
+
+    const deltaA = nextA - pointA;
+    const deltaX = nextX - pointX;
+    const deltaY = nextY - pointY;
+
+    const cursolDeltaA = cursorA - pointA;
+    const x = (cursolDeltaA * deltaX) / deltaA + pointX;
+    const y = (cursolDeltaA * deltaY) / deltaA + pointY;
+
+    return { x, y };
+}
+
+/**
+ * Get intersection point of two rays.
+ * @param {PointLike} r1b Ray 1 base point
+ * @param {PointLike} r1v Ray 1 direction vector
+ * @param {PointLike} r2b Ray 2 base point
+ * @param {PointLike} r2v Ray 2 direction vector
+ * @returns {PointLike | null} Intersection point or null if rays are parallel or don't intersect
+ */
+function intersectRays(r1b, r1v, r2b, r2v) {
+    const cross = r1v.x * r2v.y - r1v.y * r2v.x;
+    if (Math.abs(cross) < 1e-10) {
+        // No intersection or infinite intersections.
+        return null;
+    }
+
+    // Parameters for the intersection
+    const dx = r2b.x - r1b.x;
+    const dy = r2b.y - r1b.y;
+
+    const t1 = (dx * r2v.y - dy * r2v.x) / cross;
+    const t2 = (dx * r1v.y - dy * r1v.x) / cross;
+
+    // Check if intersection is in the forward direction of both rays
+    if (t1 < 0 || t2 < 0) {
+        // Intersection exists but not in the forward direction of both rays
+        return null;
+    }
+
+    // Calculate intersection point
+    return {
+        x: r1b.x + t1 * r1v.x,
+        y: r1b.y + t1 * r1v.y
+    };
+}
+
+/**
+ * Strict version of querySelector that checks for null and type
+ * @template T
+ * @param {string} selector CSS selector
+ * @param {new (...args: any[]) => T} type Expected type of the element
+ * @param {string} nickName Nickname for error messages
+ * @returns {T}
+ */
+function strictQuerySelector(selector, type, nickName) {
+    const el = document.querySelector(selector);
+    if (!el) {
+        throw new Error("Could not find " + nickName + " element (" + selector + ")");
+    }
+    if (!(el instanceof type)) {
+        throw new Error("Element " + nickName + " (" + selector + ") is not of type " + type.name);
+    }
+    return el;
+}
+
+/**
+ * Calculate distance between two points
+ * @param {PointLike} a
+ * @param {PointLike} b
+ * @returns {number}
+ */
+function distance(a, b) {
+    const dx = a.x - b.x;
+    const dy = a.y - b.y;
+    return Math.sqrt(dx * dx + dy * dy);
+}
+
+/**
+ * Bell curve function
+ * @param {number} x Input [0, 1]
+ * @param {number} maxY Maximum output value
+ * @return {number} Output [0, maxY]
+ */
+function bellCurve(x, maxY) {
+    return (maxY * Math.sin(Math.PI * (x * 2 - 0.5)) + maxY) / 2;
+}
+
+/**
+ * Calculate the length from a point to the center line between the two eyes
+ * @param {PointLike} cursor
+ * @returns {number}
+ */
+function distanceToCenterLine(cursor) {
+    const numerator = (center.x - cursor.x) * lrVec.x + (center.y - cursor.y) * lrVec.y;
+    const denominator = lrVec.x * lrVec.x + lrVec.y * lrVec.y;
+    const ps = numerator / denominator;
+    const curP = {
+        x: cursor.x + ps * lrVec.x,
+        y: cursor.y + ps * lrVec.y,
+    };
+    const curLen = Math.sqrt((curP.x - cursor.x) ** 2 + (curP.y - cursor.y) ** 2);
+    return curLen;
+}
+
+const svg = strictQuerySelector('svg', SVGSVGElement, 'SVG element');
+
+const leftMAPath = strictQuerySelector('#Left\\ eye #Move\\ area', SVGPathElement, 'left move area path');
+const rightMAPath = strictQuerySelector('#Right\\ eye #Move\\ area', SVGPathElement, 'right move area path');
+const leftIrisPath = strictQuerySelector('#Left\\ eye #Iris', SVGPathElement, 'left iris path');
+const rightIrisPath = strictQuerySelector('#Right\\ eye #Iris', SVGPathElement, 'right iris path');
+const leftEyeCenterG = strictQuerySelector('#Left\\ eye #Eye\\ center', SVGGElement, 'left eye center group');
+const rightEyeCenterG = strictQuerySelector('#Right\\ eye #Eye\\ center', SVGGElement, 'right eye center group');
+
+const leftMACenterR = findSVGPathCenter(leftMAPath);
+const rightMACenterR = findSVGPathCenter(rightMAPath);
+const leftIrisCenterR = findSVGPathCenter(leftIrisPath);
+const rightIrisCenteR = findSVGPathCenter(rightIrisPath);
+
+if (!leftMACenterR || !rightMACenterR || !leftIrisCenterR || !rightIrisCenteR) {
+    throw new Error('Could not find all eye centers');
+}
+
+const leftMACenter = leftMACenterR;
+const rightMACenter = rightMACenterR;
+const leftIrisCenter = leftIrisCenterR;
+const rightIrisCenter = rightIrisCenteR;
+
+const offsetLeft = {
+    x: leftMACenter.x - leftIrisCenter.x,
+    y: leftMACenter.y - leftIrisCenter.y
+};
+const offsetRight = {
+    x: rightMACenter.x - rightIrisCenter.x,
+    y: rightMACenter.y - rightIrisCenter.y
+};
+// Center point between the two eyes
+const center = {
+    x: (leftMACenter.x + rightMACenter.x) / 2,
+    y: (leftMACenter.y + rightMACenter.y) / 2
+};
+const cAngle = getAngle(rightMACenter, leftMACenter);
+// Vector from left to right eye
+const lrVec = {
+    x: rightMACenter.x - leftMACenter.x,
+    y: rightMACenter.y - leftMACenter.y
+};
+// Vector from right to left eye
+const rlVec = {
+    x: leftMACenter.x - rightMACenter.x,
+    y: leftMACenter.y - rightMACenter.y
+};
+// Distance between the two eyes
+const cd = distance(leftMACenter, rightMACenter);
+
+const leftAngleMap = buildAngleMap(leftMAPath, leftMACenter);
+const rightAngleMap = buildAngleMap(rightMAPath, rightMACenter);
+
+/**
+ * Update eye positions based on cursor position
+ * @param {PointLike} cursor
+ */
+function updateEye(cursor) {
+    // Blend region around center line (5% of eye distance)
+    const blendRegion = cd * 0.05;
+
+    // Distance from cursor to each eye center
+    const dl = distance(cursor, leftMACenter);
+    const dr = distance(cursor, rightMACenter);
+
+    const cld = distanceToCenterLine(cursor);
+    const primaryEye = dl < dr ? 'l' : 'r';
+
+    let ltx = 0, lty = 0, rtx = 0, rty = 0;
+    if (cld > blendRegion) {
+        ({ ltx, lty, rtx, rty } = calculateEyeTranslation(cursor, dl, dr, primaryEye));
+    } else {
+        // Blend the movement of both eyes based on distance to center line
+        const blend = cld / blendRegion;
+        const pRes = calculateEyeTranslation(cursor, dl, dr, primaryEye);
+        const sRes = calculateEyeTranslation(cursor, dl, dr, primaryEye === 'l' ? 'r' : 'l');
+
+        ltx = pRes.ltx * blend + sRes.ltx * (1 - blend);
+        lty = pRes.lty * blend + sRes.lty * (1 - blend);
+        rtx = pRes.rtx * blend + sRes.rtx * (1 - blend);
+        rty = pRes.rty * blend + sRes.rty * (1 - blend);
+    }
+
+    leftEyeCenterG.setAttribute('transform', "translate(" + (ltx + offsetLeft.x) + "," + (lty + offsetLeft.y) + ")");
+    rightEyeCenterG.setAttribute('transform', "translate(" + (rtx + offsetRight.x) + "," + (rty + offsetRight.y) + ")");
+}
+
+function calculateEyeTranslation(cursor, dl, dr, primaryEye) {
+    const lAngle = getAngle(leftMACenter, cursor);
+    const lnAngle = (lAngle < 0 ? lAngle + 360 : lAngle) - cAngle;
+    const rAngle = getAngle(rightMACenter, cursor);
+    const rnAngle = (rAngle < 0 ? 360 - (180 + rAngle) : 180 - rAngle) + cAngle;
+
+    const pAngle = primaryEye === 'l' ? lnAngle : rnAngle;
+
+    const minD = Math.min(dl, dr);
+
+    // Instersect ray method mix
+    let im = 1;
+    let inner = false;
+    if (pAngle > 165 && pAngle < 195) {
+        if (pAngle > 175 && pAngle < 185) {
+            im = 0;
+        } else {
+            im = (Math.abs(pAngle - 180) - 5) / 10;
+        }
+        inner = true;
+    }
+    if (pAngle > 340 || pAngle < 20) {
+        if (pAngle > 350 || pAngle < 10) {
+            im = 0;
+        } else {
+            im = (Math.abs(pAngle > 340 ? pAngle - 360 : pAngle) - 10) / 10;
+        }
+    }
+
+    // Left eye boundary point
+    const lBP = projectToPathBoundary(leftAngleMap, leftMACenter, cursor);
+    // Right eye boundary point
+    const rBP = projectToPathBoundary(rightAngleMap, rightMACenter, cursor);
+
+    // Primary MA center
+    const pMAC = primaryEye === 'l' ? leftMACenter : rightMACenter;
+    // Secondary MA center
+    const sMAC = primaryEye === 'l' ? rightMACenter : leftMACenter;
+
+    // Primary-to-secondary eye vector
+    const psVec = primaryEye === 'l' ? rlVec : lrVec;
+    // Primary eye center-to-cursor vector
+    const pcVec = {
+        x: cursor.x - pMAC.x,
+        y: cursor.y - pMAC.y
+    };
+
+    // Primary eye boundary point
+    const pBP = primaryEye === 'l' ? lBP : rBP;
+
+    // Secondary eye boundary point
+    const sBP = primaryEye === 'l' ? rBP : lBP;
+
+    // Secondary eye translate X, Y
+    const stx = sBP.x - sMAC.x;
+    const sty = sBP.y - sMAC.y;
+
+    // Primary boundary translate X, Y
+    let pbtx = pBP.x - pMAC.x;
+    let pbty = pBP.y - pMAC.y;
+
+    // Primary boundary translate fraction
+    let pbtf = 1;
+    if (inner) {
+        // Clamped minimum distance to half the eye distance
+        const cMinD = minD > cd / 2 ? cd / 2 : minD;
+        pbtf = cMinD * 2 / cd;
+        // More natural slow in/out
+        pbtf -= bellCurve(pbtf, 0.2);
+    } else {
+        // Distance units
+        const du = minD / cd + 1;
+        pbtf = 1 - 1 / Math.pow(du, 0.95);
+    }
+    pbtx *= pbtf;
+    pbty *= pbtf;
+
+    // Primary intersection translate X, Y
+    let pitx = pbtx, pity = pbty;
+    if (im > 0) {
+        const ip = intersectRays(sBP, psVec, pMAC, pcVec);
+        if (ip) {
+            pitx = ip.x - pMAC.x;
+            pity = ip.y - pMAC.y;
+        }
+    }
+
+    // Primary eye translate X, Y
+    const ptx = pitx * im + pbtx * (1 - im);
+    const pty = pity * im + pbty * (1 - im);
+
+    return {
+        ltx: primaryEye === 'l' ? ptx : stx,
+        lty: primaryEye === 'l' ? pty : sty,
+        rtx: primaryEye === 'r' ? ptx : stx,
+        rty: primaryEye === 'r' ? pty : sty
+    };
+}
+
+svg.addEventListener('mousemove', function (evt) {
+    const pt = svg.createSVGPoint();
+    pt.x = evt.clientX;
+    pt.y = evt.clientY;
+
+    const screenCTM = svg.getScreenCTM();
+    if (!screenCTM) {
+        return;
+    }
+
+    const cursor = pt.matrixTransform(screenCTM.inverse());
+
+    updateEye(cursor);
+});
+
+function handleTouch(evt) {
+    if (evt.touches.length <= 0) {
+        return;
+    }
+    const touch = evt.touches[0];
+    const pt = svg.createSVGPoint();
+    pt.x = touch.clientX;
+    pt.y = touch.clientY;
+
+    const screenCTM = svg.getScreenCTM();
+    if (!screenCTM) {
+        return;
+    }
+    const cursor = pt.matrixTransform(screenCTM.inverse());
+
+    updateEye(cursor);
+}
+
+svg.addEventListener('touchstart', handleTouch, { passive: true });
+svg.addEventListener('touchmove', handleTouch, { passive: true });
+
+		]]>	</script>
 </svg>
