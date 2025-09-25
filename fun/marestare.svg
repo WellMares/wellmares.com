@@ -1,6 +1,6 @@
 <svg version="1.2"
-	xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5000 5000" width="500" height="500">
-	<title>pony xeyes</title>
+	xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5000 5000" width="5000" height="5000">
+	<title>xstare</title>
 	<defs>
 		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
 			<path d="m1670.2 3948.6c168.86-15.49 302.48-159.38 373.94-373.01 22.83-68.27 34.93-142.13 43.05-223.34 13.43-134.48 25.85-298.93-0.77-449.11-87.51-493.55-342.04-831.49-678.84-786.53-77.46 10.34-145.97 61.99-204.35 122.26-70.13 72.39-134.55 176.67-170.28 300.39-11.53 39.93-11.86 81.11-19.17 125.1-19.73 118.85-23.5 251.68-7.71 391.75 57.54 510.15 351.78 921.14 664.13 892.49z"/>
@@ -653,6 +653,31 @@ function handleTouch(evt) {
 
 svg.addEventListener('touchstart', handleTouch, { passive: true });
 svg.addEventListener('touchmove', handleTouch, { passive: true });
+
+const baseRatio = window.devicePixelRatio;
+
+function getRelativeZoom() {
+  return window.devicePixelRatio / baseRatio;
+}
+
+function resizeAndCenterSVG() {
+    const rz = getRelativeZoom();
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    const size = Math.min(w, h) * 0.5 * rz;
+
+    svg.setAttribute("width", size);
+    svg.setAttribute("height", size);
+    svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+
+    svg.style.position = "absolute";
+    svg.style.left = "50%";
+    svg.style.top = "50%";
+    svg.style.transform = "translate(-50%, -50%)";
+}
+
+resizeAndCenterSVG();
+window.addEventListener("resize", resizeAndCenterSVG);
 
 		]]>	</script>
 </svg>
